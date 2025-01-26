@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+  min-height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.input_area {
+  background-image: url(https://img.freepik.com/free-vector/background-white-design-gradient-vector-modern-abstract_343694-2366.jpg);
+      background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: 33% 48% 0%;
+  gap: 2px;
+  
+}
+.column {
+  padding: 5px;
+   
+}
+.first-column{
+  display: flex;
+  flex-direction: column;
+}
+.threeboxes{
+  margin-top:150px;
+}
+.threeboxes h3{
+  margin:20px;
+}
+.threeboxes h4{
+  margin:40px 10px 0 10px;
+}
+.threeboxes p{
+  margin:30px 5px 0 10px;
+}
+.firstbox, .secondbox, .thirdbox{
+  position: relative;
+  margin: 32px -447px 0px 37px;
+  width: 400px;
+  border-radius: 30px;
+  height:300px;
+  background-color: #b6c3fd;
+  border:10px solid #f4f4f9;
+  border-style: ridge;
+  color:#050538;
+  transition: background-color 0.2s;
+  cursor:pointer;
+}
+.firstbox:hover,.secondbox:hover, .thirdbox:hover{
+  background-color: #061836;
+  transition: background-color o.3s ;
+  border:5px groove #050538;
+  color:#ddd;
+}
+.secondcolumn{
+  margin:0 -420px
+}
+.column.track{
+  background-color: rgb(255, 255, 255, 0.1);
+
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 39px 8px 1px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(0px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.header:hover::before {
+  left: 100%;
+}
+
+.container
+{
+  margin: 5px;
+  height: 10px;
+  margin-right:-700px;
+}
+.container img
+{
+	max-width: 30px;
+  border-radius: 30px;
+  margin-left: 0px;
+}
+
+@media (min-width: 20em)
+{
+	.container
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.container img
+	{
+		margin-right: 1em;
+		float: left; 
+	}
+}
+  .container h1 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container h1{
+    cursor: pointer;
+    font-size: larger;
+    transition:0.3s ease;
+    transform-origin:left;
+    padding-top:5px;
+    margin:0;
+    color: #e0f1f2;
+  }
+  .container h1:hover{
+    transform: scale(1.1);
+    color: #bff2f3;
+    
+  }
+
+.navbar a {
+  color: #08032c;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #00fbff;
+  border-radius: 50px;
+  color:#080f34;
+  padding:10px;
+  width:150px;
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #ffffff;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    background-color: rgb(0 0 0 / 48%);
+    display: none;
+  }
+  .navbar a {
+    color: #e6e5f0;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  .nav-bg {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    height: 295px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav-bg.active {
+    display: block;
+   
+  }
+}
+@media (max-width: 768px) {
+  .input_area{
+    margin: 0 0 0 -400px;
+  }
+  .container0{
+    margin:0 0 0 -350px;
+  }
+  .column.track{
+    margin-top: 100px;
+  }
+  .container5{
+    margin: 0 0px 0 355px;
+  }
+}
+.hero {
+  height: 330px;
+  background-size: cover;
+  background-position:center ;
+  background-color: #ed0606;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #02070d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #fcf7f7;
+  color:#02070d;
+}
+.container1{
+  margin-top:60px;
+  margin-left:65px;
+  line-height: 50px;
+}
+.column.chat {
+  position: relative;
+}
+
+.column.chat > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.track-order, .ship-order {
+  padding: 20px 0;
+  text-align: center;
+}
+.track-order, .ship-order{
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px 8px rgba(0,0,0,0.1);
+  width: 550px;
+    margin: 10px 10px 10px 450px;
+}
+
+.track-order h2, .ship-order h2 {
+  margin-bottom: 20px;
+}
+
+.track-order form, .ship-category form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.track-order label, .ship-category label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.track-order input, .ship-category input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.track-order button, .ship-category button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e90520;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.track-order button:hover, .ship-category button:hover {
+  background-color: #060101;
+}
+
+.ship-category {
+  margin-bottom: 40px;
+}
+
+.ship-category h3 {
+  margin-bottom: 20px;
+}
+.info{
+  margin-left:10px ;
+}
+footer {
+  background-color: #0b3d91;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+}
+
+footer .container5 p {
+  margin: 0;
+}
