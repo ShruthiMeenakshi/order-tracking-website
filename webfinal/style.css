@@ -236,6 +236,9 @@ body {
     display: block;
    
   }
+  .first-column{
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .input_area{
